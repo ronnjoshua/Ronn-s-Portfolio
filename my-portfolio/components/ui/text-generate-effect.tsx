@@ -23,7 +23,7 @@ export const TextGenerateEffect = ({
 
   useEffect(() => {
     const loopAnimation = async () => {
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 2; i++) {
         await animate(
           "span",
           {
@@ -32,12 +32,12 @@ export const TextGenerateEffect = ({
           },
           {
             duration: duration,
-            delay: stagger(0.35),
+            delay: stagger(0.3),
           }
         );
 
         // Only fade out if it's not the last iteration
-        if (i < 2) {
+        if (i < 1) {
           await animate("span", { opacity: 0 }, { duration: 1, delay: 1 });
         }
       }
@@ -56,7 +56,7 @@ export const TextGenerateEffect = ({
               idx >= 0 && idx <= 2
                 ? "text-purple-500"
                 : "dark:text-gray-100 text-black"
-            } opacity-0`}
+            } opacity-50`}
             style={{
               filter: filter ? "blur(10px)" : "none",
             }}

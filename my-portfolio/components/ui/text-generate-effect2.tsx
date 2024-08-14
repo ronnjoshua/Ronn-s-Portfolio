@@ -23,7 +23,7 @@ export const TextGenerateEffect2 = ({
 
   useEffect(() => {
     const loopAnimation = async () => {
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 1; i++) {
         await animate(
           "span",
           {
@@ -36,15 +36,17 @@ export const TextGenerateEffect2 = ({
           }
         );
 
-        // Only fade out if it's not the last iteration
-        if (i < 2) {
-          await animate("span", { opacity: 0 }, { duration: 1, delay: 1.8 });
-        }
       }
     };
 
+  // Delay the start of the animation by 5 seconds
+  const timeoutId = setTimeout(() => {
     loopAnimation();
-  }, [animate, duration, filter]);
+  }, 4400);
+
+  // Clear the timeout if the component unmounts to prevent memory leaks
+  return () => clearTimeout(timeoutId);
+}, [animate, duration, filter]);
 
   const renderAnimatedWords = () => {
     return (
@@ -53,7 +55,7 @@ export const TextGenerateEffect2 = ({
           <motion.span
             key={word + idx}
             className={`${
-              idx >= 0 && idx <= 2
+              idx >= 2 && idx <= 2
                 ? "text-purple-500"
                 : "dark:text-gray-100 text-black"
             } opacity-0`}
@@ -70,7 +72,7 @@ export const TextGenerateEffect2 = ({
 
   return (
     <div className={cn("font-bold", className)}>
-      <div className="dark:text-white text-black text-2xl leading-snug tracking-wide">
+      <div className="mt-4 dark:text-white text-black text-2xl leading-snug tracking-wide">
         {/* Render the visible text, animated words, and post-animated text in a single line */}
         <span>{visibleText} </span>
         {renderAnimatedWords()}

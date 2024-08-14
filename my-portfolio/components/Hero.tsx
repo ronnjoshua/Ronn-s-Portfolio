@@ -7,7 +7,7 @@ import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 
 const words = `Ideas to Life, `;
-const introduction = `Ronn `;
+const introduction = `Hi, I'm Ronn a Website Developer.`;
 
 // `Bringing Your Ideas to Life, One Line of Code at a Time.`
 
@@ -33,9 +33,9 @@ const Hero = () => {
         className="text-center text-[40] md:text-5xl lg:text-6xl z-20"
       />
       <TextGenerateEffect2
-        visibleText="Hi, I'm "
+        visibleText=""
         animatedText={introduction}
-        postAnimatedText=" a Website Developer."
+        postAnimatedText=""
         className="z-20"
       />
       <a className="mt-4" href="#about">
