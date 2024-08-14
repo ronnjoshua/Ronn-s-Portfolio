@@ -42,7 +42,7 @@ export const TextGenerateEffect2 = ({
   // Delay the start of the animation by 5 seconds
   const timeoutId = setTimeout(() => {
     loopAnimation();
-  }, 4400);
+  }, 4500);
 
   // Clear the timeout if the component unmounts to prevent memory leaks
   return () => clearTimeout(timeoutId);
