@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { TextGenerateEffect2 } from "./ui/text-generate-effect2";
-import { Boxes } from "./ui/background-boxes";
+import { Boxes } from "./ui/BackgroundBoxes";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 
