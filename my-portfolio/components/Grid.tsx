@@ -5,8 +5,8 @@ import { Boxes } from "./ui/BackgroundBoxes";
 
 const Grid = () => {
   return (
-    <section id="about">
-      <BentoGrid className="mt-3 mb-3">
+    <section id="about" className="bg-slate-900">
+      <BentoGrid>
         {GridItems.map((item) => (
           <BentoGridItem
             key={item.id}

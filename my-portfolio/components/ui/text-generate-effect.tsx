@@ -70,7 +70,7 @@ export const TextGenerateEffect = ({
 
   return (
     <div className={cn("font-bold", className)}>
-      <div className="dark:text-white text-black text-2xl lg:text-6xl leading-snug tracking-wide">
+      <div className=" dark:text-white text-black text-2xl lg:text-6xl leading-snug tracking-wide">
         {/* Render the visible text, animated words, and post-animated text in a single line */}
         <span>{visibleText} </span>
         {renderAnimatedWords()}
